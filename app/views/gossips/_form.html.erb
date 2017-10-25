@@ -1,21 +1,13 @@
 <%= form_tag (gossips_path) do %>
- 
- <% if @gossip.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@gossip.errors.count, "error") %> prohibited
-        this gossip from being saved:
-      </h2>
-      <ul>
-        <% @gossip.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
+
+<p>
   <%= label_tag 'anonymous_author', "Auteur du ragot" %>
   <%= text_field_tag 'anonymous_author' %>
+</p>
  
+ <p>
   <%= label_tag 'content', 'Ragot' %>
   <%= text_area_tag 'content' %>
+</p>
+ 
+ <% end %>

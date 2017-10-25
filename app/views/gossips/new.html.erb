@@ -1,6 +1,19 @@
 <h1>Créer un nouveau ragot</h1>
 
-<% render "form" %>
+<%= form_tag (gossips_path) do %>
+
+<p>
+  <%= label_tag 'anonymous_author', "Auteur du ragot" %>
+  <%= text_field_tag 'anonymous_author' %>
+</p>
  
-  <%= submit_tag "Balancer du lourd dossier"%>
-<% end %>
+ <p>
+  <%= label_tag 'content', 'Ragot' %>
+  <%= text_area_tag 'content' %>
+</p>
+ 
+ <%= submit_tag "Balancer du lourd dossier"%>
+ <% end %>
+ 
+ 
+

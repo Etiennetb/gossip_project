@@ -9,6 +9,7 @@ class GossipsController < ApplicationController
 
 	def create
 		@gossip = Gossip.new(gossip_params)
+		@gossip.save
 		if @gossip.save
 		redirect_to @gossip
 		else

@@ -1,8 +1,18 @@
 <h1>Editer le ragot</h1>
 
 <%= form_tag gossip_path(@gossip), method: :put do %>
+
+<p>
+  <%= label_tag 'anonymous_author', "Auteur du ragot" %>
+  <%= text_field_tag 'anonymous_author' %>
+</p>
  
- <% render "form" %>
+ <p>
+  <%= label_tag 'content', 'Ragot' %>
+  <%= text_area_tag 'content' %>
+</p>
  
   <%= submit_tag "Modifier le ragot !"%>
-<% end %>
+ <% end %>
+ 
+ 
